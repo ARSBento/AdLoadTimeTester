@@ -24,7 +24,6 @@ if adblock=='y':
 	
 driver = webdriver.Chrome(executable_path=executable_path, chrome_options=chrome_options)
 driver.set_window_size(1280, 760)
-
 fName=prefix+"_"+adblockprefix+"_firstPaint_"+str(iterations)
 f2Name=prefix+"_"+adblockprefix+"_loadEventEnd_"+str(iterations)
 	
@@ -39,6 +38,7 @@ if adblock=='y':
 for i in xrange(0,iterations):
 	
 	driver.get(url)
+	
 	if i==0:
 		print "skiping first request to avoid cache measurement discrepancies"
 		continue
